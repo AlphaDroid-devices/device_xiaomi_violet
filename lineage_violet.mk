@@ -8,10 +8,14 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common PB stuff.
+# Inherit some common AlphaDroid stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# DroidX stuff
+# MiuiCamera
+$(call inherit-product, vendor/MiuiCamera/config.mk)
+
+
+# AlphaDroid stuff
 ALPHA_BUILD_TYPE := Official
 ALPHA_MAINTAINER := Dr.Opto
 
