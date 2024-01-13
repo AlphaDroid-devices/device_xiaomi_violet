@@ -1,3 +1,4 @@
+bash: line 1: 216: command not found
 #
 # Copyright (C) 2018-2020 The LineageOS Project
 # Copyright (C) 2020 The PixelExperience Project
@@ -213,7 +214,7 @@ PRODUCT_PACKAGES += \
     qcom.fmradio
 
 # Firmware
-$(call inherit-product, vendor/xiaomi-firmware/violet/firmware.mk)
+$(call inherit-product, vendor/xiaomi-firmware/firmware.mk)
 
 # Framework detect
 PRODUCT_PACKAGES += \
