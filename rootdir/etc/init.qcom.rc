@@ -308,7 +308,10 @@ on boot
     enable vendor.dataqti
     enable vendor.dataadpl
 
-# msm specific files that need to be created on /data
+    # Disable kernel logging for better performance
+    write /proc/sys/kernel/printk "0 0 0 0"
+
+    # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /mnt/vendor/persist/qti_fp 0700 system system
