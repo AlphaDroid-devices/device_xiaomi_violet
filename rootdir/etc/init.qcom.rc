@@ -686,3 +686,9 @@ on property:sys.boot_completed=1
     # Restrict permissions to socket file
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
+
+service zramswap /system/bin/swapon /dev/block/zram0
+    class main
+    user root
+    group root
+    oneshot
