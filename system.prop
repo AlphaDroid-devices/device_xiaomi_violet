@@ -2,3 +2,21 @@
 ro.droidx.maintainer=Dr.Opto
 ro.droidx.chipset=Snapdragon 675
 ro.droidx.display_resolution=6.3" IPS LCD 1080x2340
+
+# Disable kernel panic for better stability
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+
+# Reduce the delay before killing inactive processes
+persist.sys.purgeable_assets=1
+
+# Improve scrolling responsiveness
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+
+# Miscellaneous performance tweaks
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
+persist.service.mount.playsnd=0
+ro.config.nocheckin=1
+
