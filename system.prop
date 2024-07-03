@@ -15,3 +15,23 @@ persist.service.pcsync.enable=0
 persist.service.mount.playsnd=0
 ro.config.nocheckin=1
 
+# Enable Just-In-Time (JIT) compilation
+dalvik.vm.usejit=true
+
+# Optimize garbage collection
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.dex2oat-filter=speed
+
+# Improve dex2oat speed
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.usejitprofiles=true
+
+# Enable dalvik VM's experimental features
+dalvik.vm.dexopt-flags=m=y
+
+# Enable Background Compilation
+dalvik.vm.bg-dexopt=true
+
+# Minimize GC pauses
+dalvik.vm.dex2oat-Xms64m
+dalvik.vm.dex2oat-Xmx512m
