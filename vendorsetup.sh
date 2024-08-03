@@ -14,4 +14,4 @@ rm -rf packages/resources/devicesettings
 git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git -b lineage-20.0 packages/resources/devicesettings --depth=1
 
 # Miui Camera stuff
-git clone https://gitlab.com/Joker-V2/android_vendor_MiuiCamera.git -b thirteen vendor/MiuiCamera
+git clone https://gitlab.com/Drpto/android_vendor_MiuiCamera.git -b thirteen vendor/MiuiCamera

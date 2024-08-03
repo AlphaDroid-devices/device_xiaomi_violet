@@ -8,20 +8,28 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some commom DroidX-UI stuff.
-$(call inherit-product, vendor/droidx/config/common.mk)
+# Inherit some commom lineage stuff.
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 # MiuiCamera
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
+#AlphaDroid prop
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_INCLUDE_MATLOG := false
+TARGET_BUILD_PACKAGE := 2
+TARGET_LAUNCHER := 2
+
+# Maintainer
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := Dr.Opto
+
 #Device Props
+TARGET_ENABLE_FACEUNLOCK := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := false
 TARGET_DEBLOAT := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-DROIDX_BUILD_TYPE := OFFICIAL
-DROIDX_GAPPS := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -30,7 +38,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := droidx_violeT
+PRODUCT_NAME := lineage_violeT
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
